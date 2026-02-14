@@ -1,0 +1,1430 @@
+{
+  "version": 2,
+  "notes": [
+    "Deterministic, inspectable theme system.",
+    "Tier 1 meta-themes are fail-safe; at least one always applies.",
+    "Tier 2 canonical themes: keywords + book defaults + minimal chapter overrides.",
+    "Tier 3 stub exists but is never required."
+  ],
+  "tier1": {
+    "metaThemes": [
+      {
+        "id": "revelation",
+        "label": "Revelation",
+        "baseWeight": 0.22,
+        "description": "Scripture reveals God, His works, and His will."
+      },
+      {
+        "id": "divine_action",
+        "label": "Divine Action",
+        "baseWeight": 0.18,
+        "description": "God acts in history, covenant, judgment, mercy, and providence."
+      },
+      {
+        "id": "human_response",
+        "label": "Human Response",
+        "baseWeight": 0.14,
+        "description": "Commands, exhortations, repentance, faith, obedience, worship."
+      },
+      {
+        "id": "time_eternity",
+        "label": "Time / Eternity",
+        "baseWeight": 0.12,
+        "description": "Temporal life is set before eternal realities."
+      }
+    ],
+    "fallbackOrder": [
+      "revelation"
+    ]
+  },
+  "tier2": {
+    "canonicalThemes": [
+      {
+        "id": "beginning",
+        "label": "Beginning",
+        "keywords": [
+          "beginning"
+        ],
+        "phrases": [
+          "in the beginning"
+        ],
+        "paletteBias": {
+          "bright": 0.6,
+          "dark": 0.4
+        },
+        "hydraFamily": "genesis"
+      },
+      {
+        "id": "creation",
+        "label": "Creation",
+        "keywords": [
+          "beginning",
+          "created",
+          "make",
+          "made",
+          "formed",
+          "earth",
+          "heaven",
+          "light"
+        ],
+        "paletteBias": {
+          "bright": 0.7,
+          "dark": 0.3
+        },
+        "hydraFamily": "genesis"
+      },
+      {
+        "id": "light",
+        "label": "Light",
+        "keywords": [
+          "light",
+          "shine",
+          "lamp",
+          "candle",
+          "day",
+          "sun"
+        ],
+        "paletteBias": {
+          "bright": 0.8,
+          "dark": 0.2
+        },
+        "hydraFamily": "light"
+      },
+      {
+        "id": "darkness",
+        "label": "Darkness",
+        "keywords": [
+          "darkness",
+          "night",
+          "shadow",
+          "dark"
+        ],
+        "phrases": [
+          "loved darkness",
+          "rather than light"
+        ],
+        "paletteBias": {
+          "bright": 0.2,
+          "dark": 0.8
+        },
+        "hydraFamily": "lament"
+      },
+      {
+        "id": "word",
+        "label": "Word of God",
+        "keywords": [
+          "word",
+          "scripture",
+          "command",
+          "truth",
+          "testimony"
+        ],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "scroll"
+      },
+      {
+        "id": "law",
+        "label": "Law",
+        "keywords": [
+          "law",
+          "commandments",
+          "statutes",
+          "judgments",
+          "ordinances"
+        ],
+        "paletteBias": {
+          "bright": 0.45,
+          "dark": 0.55
+        },
+        "hydraFamily": "scroll"
+      },
+      {
+        "id": "promise",
+        "label": "Promise",
+        "keywords": [
+          "shall",
+          "will",
+          "promise",
+          "covenant",
+          "sure",
+          "faithful"
+        ],
+        "paletteBias": {
+          "bright": 0.6,
+          "dark": 0.4
+        },
+        "hydraFamily": "promise"
+      },
+      {
+        "id": "presence",
+        "label": "Presence of God",
+        "keywords": [
+          "presence",
+          "with thee",
+          "with you",
+          "abide",
+          "dwelleth"
+        ],
+        "paletteBias": {
+          "bright": 0.55,
+          "dark": 0.45
+        },
+        "hydraFamily": "presence"
+      },
+      {
+        "id": "kingdom",
+        "label": "Kingdom",
+        "keywords": [
+          "king",
+          "kingdom",
+          "throne",
+          "reign",
+          "crown",
+          "lord"
+        ],
+        "paletteBias": {
+          "bright": 0.55,
+          "dark": 0.45
+        },
+        "hydraFamily": "kingdom"
+      },
+      {
+        "id": "worship",
+        "label": "Worship",
+        "keywords": [
+          "praise",
+          "worship",
+          "bless",
+          "sing",
+          "exalt",
+          "magnify"
+        ],
+        "paletteBias": {
+          "bright": 0.65,
+          "dark": 0.35
+        },
+        "hydraFamily": "worship"
+      },
+      {
+        "id": "sin",
+        "label": "Sin",
+        "keywords": [
+          "sin",
+          "iniquity",
+          "transgression",
+          "wicked",
+          "evil"
+        ],
+        "paletteBias": {
+          "bright": 0.25,
+          "dark": 0.75
+        },
+        "hydraFamily": "lament"
+      },
+      {
+        "id": "judgment",
+        "label": "Judgment",
+        "keywords": [
+          "judge",
+          "judgment",
+          "wrath",
+          "hell",
+          "fire",
+          "condemn",
+          "vengeance"
+        ],
+        "paletteBias": {
+          "bright": 0.25,
+          "dark": 0.75
+        },
+        "hydraFamily": "judgment"
+      },
+      {
+        "id": "redemption",
+        "label": "Redemption",
+        "keywords": [
+          "redeem",
+          "redemption",
+          "blood",
+          "cross",
+          "save",
+          "salvation",
+          "grace"
+        ],
+        "paletteBias": {
+          "bright": 0.62,
+          "dark": 0.38
+        },
+        "hydraFamily": "redemption"
+      },
+      {
+        "id": "resurrection",
+        "label": "Resurrection",
+        "keywords": [
+          "rise",
+          "raised",
+          "resurrection",
+          "alive",
+          "life",
+          "quickened"
+        ],
+        "paletteBias": {
+          "bright": 0.7,
+          "dark": 0.3
+        },
+        "hydraFamily": "resurrection"
+      },
+      {
+        "id": "life",
+        "label": "Life",
+        "keywords": [
+          "life"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.7,
+          "dark": 0.3
+        },
+        "hydraFamily": "praise"
+      },
+      {
+        "id": "breath_spirit",
+        "label": "Breath / Spirit",
+        "keywords": [
+          "breath",
+          "spirit"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "image",
+        "label": "Image",
+        "keywords": [
+          "image"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "good",
+        "label": "Good",
+        "keywords": [
+          "good"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "evil",
+        "label": "Evil",
+        "keywords": [
+          "evil"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.3,
+          "dark": 0.7
+        },
+        "hydraFamily": "lament"
+      },
+      {
+        "id": "command",
+        "label": "Command",
+        "keywords": [
+          "command"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "choice",
+        "label": "Choice",
+        "keywords": [
+          "choice"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "knowledge",
+        "label": "Knowledge",
+        "keywords": [
+          "knowledge"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "death",
+        "label": "Death",
+        "keywords": [
+          "death"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.3,
+          "dark": 0.7
+        },
+        "hydraFamily": "lament"
+      },
+      {
+        "id": "covering",
+        "label": "Covering",
+        "keywords": [
+          "covering"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "seed",
+        "label": "Seed",
+        "keywords": [
+          "seed"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "calling",
+        "label": "Calling",
+        "keywords": [
+          "calling"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "covenant",
+        "label": "Covenant",
+        "keywords": [
+          "covenant"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "way",
+        "label": "Way",
+        "keywords": [
+          "way"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "sacrifice",
+        "label": "Sacrifice",
+        "keywords": [
+          "sacrifice"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "blood",
+        "label": "Blood",
+        "keywords": [
+          "blood"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.3,
+          "dark": 0.7
+        },
+        "hydraFamily": "lament"
+      },
+      {
+        "id": "priest",
+        "label": "Priest",
+        "keywords": [
+          "priest"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "king",
+        "label": "King",
+        "keywords": [
+          "king"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "prophet",
+        "label": "Prophet",
+        "keywords": [
+          "prophet"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "wisdom",
+        "label": "Wisdom",
+        "keywords": [
+          "wisdom"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "fear",
+        "label": "Fear",
+        "keywords": [
+          "fear"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "love",
+        "label": "Love",
+        "keywords": [
+          "love"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.7,
+          "dark": 0.3
+        },
+        "hydraFamily": "praise"
+      },
+      {
+        "id": "mercy",
+        "label": "Mercy",
+        "keywords": [
+          "mercy"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.7,
+          "dark": 0.3
+        },
+        "hydraFamily": "praise"
+      },
+      {
+        "id": "truth",
+        "label": "Truth",
+        "keywords": [
+          "truth"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.7,
+          "dark": 0.3
+        },
+        "hydraFamily": "praise"
+      },
+      {
+        "id": "faith",
+        "label": "Faith",
+        "keywords": [
+          "faith"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "righteousness",
+        "label": "Righteousness",
+        "keywords": [
+          "righteousness"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "repentance",
+        "label": "Repentance",
+        "keywords": [
+          "repentance"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "forgiveness",
+        "label": "Forgiveness",
+        "keywords": [
+          "forgiveness"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "salvation",
+        "label": "Salvation",
+        "keywords": [
+          "salvation"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "new_birth",
+        "label": "New Birth",
+        "keywords": [
+          "new",
+          "birth"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "spirit",
+        "label": "Spirit",
+        "keywords": [
+          "spirit"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "witness",
+        "label": "Witness",
+        "keywords": [
+          "witness"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "body",
+        "label": "Body",
+        "keywords": [
+          "body"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "bread",
+        "label": "Bread",
+        "keywords": [
+          "bread"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "water",
+        "label": "Water",
+        "keywords": [
+          "water"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "rest",
+        "label": "Rest",
+        "keywords": [
+          "rest"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "peace",
+        "label": "Peace",
+        "keywords": [
+          "peace"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.7,
+          "dark": 0.3
+        },
+        "hydraFamily": "praise"
+      },
+      {
+        "id": "suffering",
+        "label": "Suffering",
+        "keywords": [
+          "suffering"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "hope",
+        "label": "Hope",
+        "keywords": [
+          "hope"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.7,
+          "dark": 0.3
+        },
+        "hydraFamily": "praise"
+      },
+      {
+        "id": "glory",
+        "label": "Glory",
+        "keywords": [
+          "glory"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.7,
+          "dark": 0.3
+        },
+        "hydraFamily": "praise"
+      },
+      {
+        "id": "inheritance",
+        "label": "Inheritance",
+        "keywords": [
+          "inheritance"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "eternal_life",
+        "label": "Eternal Life",
+        "keywords": [
+          "eternal",
+          "life"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.7,
+          "dark": 0.3
+        },
+        "hydraFamily": "praise"
+      },
+      {
+        "id": "end",
+        "label": "End",
+        "keywords": [
+          "end"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "name",
+        "label": "Name",
+        "keywords": [
+          "name"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "glory_of_god",
+        "label": "Glory Of God",
+        "keywords": [
+          "glory",
+          "god"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.7,
+          "dark": 0.3
+        },
+        "hydraFamily": "praise"
+      },
+      {
+        "id": "holiness",
+        "label": "Holiness",
+        "keywords": [
+          "holiness"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "face",
+        "label": "Face",
+        "keywords": [
+          "face"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "voice",
+        "label": "Voice",
+        "keywords": [
+          "voice"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "hand",
+        "label": "Hand",
+        "keywords": [
+          "hand"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "heart",
+        "label": "Heart",
+        "keywords": [
+          "heart"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "mind",
+        "label": "Mind",
+        "keywords": [
+          "mind"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "soul",
+        "label": "Soul",
+        "keywords": [
+          "soul"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "strength",
+        "label": "Strength",
+        "keywords": [
+          "strength"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "power",
+        "label": "Power",
+        "keywords": [
+          "power"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "authority",
+        "label": "Authority",
+        "keywords": [
+          "authority"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "throne",
+        "label": "Throne",
+        "keywords": [
+          "throne"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "crown",
+        "label": "Crown",
+        "keywords": [
+          "crown"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "nation",
+        "label": "Nation",
+        "keywords": [
+          "nation"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "people",
+        "label": "People",
+        "keywords": [
+          "people"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "remnant",
+        "label": "Remnant",
+        "keywords": [
+          "remnant"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "exile",
+        "label": "Exile",
+        "keywords": [
+          "exile"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "return",
+        "label": "Return",
+        "keywords": [
+          "return"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "inheritance_of_the_land",
+        "label": "Inheritance Of The Land",
+        "keywords": [
+          "inheritance",
+          "land"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "city",
+        "label": "City",
+        "keywords": [
+          "city"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "temple",
+        "label": "Temple",
+        "keywords": [
+          "temple"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "altar",
+        "label": "Altar",
+        "keywords": [
+          "altar"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "fire",
+        "label": "Fire",
+        "keywords": [
+          "fire"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.3,
+          "dark": 0.7
+        },
+        "hydraFamily": "lament"
+      },
+      {
+        "id": "cloud",
+        "label": "Cloud",
+        "keywords": [
+          "cloud"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "sign",
+        "label": "Sign",
+        "keywords": [
+          "sign"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "testimony",
+        "label": "Testimony",
+        "keywords": [
+          "testimony"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "witnesses",
+        "label": "Witnesses",
+        "keywords": [
+          "witnesses"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "scroll_book",
+        "label": "Scroll / Book",
+        "keywords": [
+          "scroll",
+          "book"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "vision",
+        "label": "Vision",
+        "keywords": [
+          "vision"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "dream",
+        "label": "Dream",
+        "keywords": [
+          "dream"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "mystery",
+        "label": "Mystery",
+        "keywords": [
+          "mystery"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "time_season",
+        "label": "Time / Season",
+        "keywords": [
+          "time",
+          "season"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "watchfulness",
+        "label": "Watchfulness",
+        "keywords": [
+          "watchfulness"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "sealing",
+        "label": "Sealing",
+        "keywords": [
+          "sealing"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "measure",
+        "label": "Measure",
+        "keywords": [
+          "measure"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.5,
+          "dark": 0.5
+        },
+        "hydraFamily": "calm"
+      },
+      {
+        "id": "reward",
+        "label": "Reward",
+        "keywords": [
+          "reward"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.7,
+          "dark": 0.3
+        },
+        "hydraFamily": "praise"
+      },
+      {
+        "id": "book_of_life",
+        "label": "Book Of Life",
+        "keywords": [
+          "book",
+          "life"
+        ],
+        "phrases": [],
+        "paletteBias": {
+          "bright": 0.7,
+          "dark": 0.3
+        },
+        "hydraFamily": "praise"
+      }
+    ]
+  },
+  "bookDefaults": {
+    "Genesis": [
+      {
+        "theme": "creation",
+        "weight": 0.35,
+        "source": "book default"
+      }
+    ],
+    "Psalms": [
+      {
+        "theme": "worship",
+        "weight": 0.35,
+        "source": "book default"
+      },
+      {
+        "theme": "presence",
+        "weight": 0.18,
+        "source": "book default"
+      }
+    ],
+    "John": [
+      {
+        "theme": "word",
+        "weight": 0.25,
+        "source": "book default"
+      }
+    ],
+    "Romans": [
+      {
+        "theme": "redemption",
+        "weight": 0.22,
+        "source": "book default"
+      }
+    ]
+  },
+  "chapterOverrides": {
+    "Psalm|23": [
+      {
+        "theme": "presence",
+        "weight": 0.35,
+        "source": "chapter context"
+      },
+      {
+        "theme": "promise",
+        "weight": 0.22,
+        "source": "chapter context"
+      }
+    ]
+  },
+  "grammarRules": {
+    "imperativeHints": [
+      "be",
+      "seek",
+      "remember",
+      "come",
+      "go",
+      "fear",
+      "trust",
+      "pray",
+      "rejoice",
+      "repent"
+    ],
+    "promiseMarkers": [
+      "I will",
+      "thou shalt",
+      "he shall",
+      "shall not",
+      "will not",
+      "shall be",
+      "will be"
+    ],
+    "declarationMarkers": [
+      "verily",
+      "surely",
+      "it is written",
+      "thus saith",
+      "the LORD"
+    ]
+  },
+  "tier3": {
+    "enabled": false,
+    "schemaNotes": [
+      "Tier 3 is intentionally stubbed. Additive only.",
+      "Later expansion can map verses to Logos-style themes (Name, Glory of God, Holiness, etc.)."
+    ],
+    "themes": []
+  }
+}

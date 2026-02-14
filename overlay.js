@@ -1,193 +1,155 @@
-/**
- * p5 overlay: Bible verses with slow type reveal.
- * Requirements:
- * - No forbidden imagery (text + simple border only)
- * - Gemstone palette used for accents
- * - Clean typography at low-res internal render
- */
+(function () {
+  "use strict";
 
-function pickPalette(palette) {
-  return palette[Math.floor(Math.random() * palette.length)];
-}
+  window.Memorial = window.Memorial || {};
 
-function clamp01(x) {
-  return Math.max(0, Math.min(1, x));
-}
+  // Overlay orchestrates model appearances (timing + cycling) while keeping the renderer policy restrained.
+  class OverlayLayer {
+    constructor({ el, modelLayer }) {
+      this.el = el;
+      this.modelLayer = modelLayer;
 
-export function createVerseOverlay({ mountEl, internal, fps, palette, audio, verseConfig }) {
-  const verses = [
-    { ref: "Psalm 119:105", text: "Thy word is a lamp unto my feet, and a light unto my path." },
-    { ref: "Proverbs 3:5–6", text: "Trust in the LORD with all thine heart; and lean not unto thine own understanding. In all thy ways acknowledge him, and he shall direct thy paths." },
-    { ref: "Isaiah 41:10", text: "Fear thou not; for I am with thee: be not dismayed; for I am thy God: I will strengthen thee; yea, I will help thee; yea, I will uphold thee with the right hand of my righteousness." },
-    { ref: "Matthew 11:28", text: "Come unto me, all ye that labour and are heavy laden, and I will give you rest." },
-    { ref: "John 14:6", text: "Jesus saith unto him, I am the way, the truth, and the life: no man cometh unto the Father, but by me." },
-    { ref: "Romans 8:28", text: "And we know that all things work together for good to them that love God, to them who are the called according to his purpose." },
-    { ref: "2 Timothy 1:7", text: "For God hath not given us the spirit of fear; but of power, and of love, and of a sound mind." },
-    { ref: "Philippians 4:6–7", text: "Be careful for nothing; but in every thing by prayer and supplication with thanksgiving let your requests be made known unto God. And the peace of God, which passeth all understanding, shall keep your hearts and minds through Christ Jesus." }
-  ];
+      this.enabled = true;
 
-  let verseIndex = 0;
-  let current = verses[0];
-  let accent = pickPalette(palette);
+      // Current verse + model plan
+      this.currentVerseKey = "";
+      this.modelCyclePlan = null; // { models:[...], intervalMs:number }
 
-  // State timings
-  let startMs = 0;
-  let revealDoneMs = 0;
-  let fadeStartMs = 0;
-  let cycleDoneMs = 0;
+      // Cycle state
+      this.cycleStarted = false;
+      this.cycleIndex = 0;
+      this.nextSwitchMs = 0;
 
-  function nextVerse(nowMs) {
-    verseIndex = (verseIndex + 1) % verses.length;
-    current = verses[verseIndex];
-    accent = pickPalette(palette);
+      // Policy: wait until text reveal passes threshold before starting cycle
+      this.revealThreshold = 0.65;
+    }
 
-    startMs = nowMs;
-    revealDoneMs = 0;
-    fadeStartMs = 0;
-    cycleDoneMs = 0;
-  }
-
-  function buildFullText(v) {
-    return `“${v.text}”\n\n— ${v.ref}`;
-  }
-
-  // Basic wrap: split on spaces; p5.textWidth used at draw time.
-  function wrapLines(p, str, maxWidth) {
-    const lines = [];
-    const paragraphs = str.split("\n");
-
-    for (const para of paragraphs) {
-      if (para.trim() === "") {
-        lines.push("");
-        continue;
+    setEnabled(enabled) {
+      this.enabled = !!enabled;
+      if (!this.enabled) {
+        this.modelLayer.clear();
+        this.cycleStarted = false;
       }
-      const words = para.split(/\s+/);
-      let line = "";
-      for (const w of words) {
-        const test = line ? (line + " " + w) : w;
-        if (p.textWidth(test) <= maxWidth) {
-          line = test;
+    }
+
+    onNewVerse({ verseKey, modelCyclePlan }) {
+      this.currentVerseKey = verseKey || "";
+      this.modelCyclePlan = modelCyclePlan || null;
+
+      this.cycleStarted = false;
+      this.cycleIndex = 0;
+      this.nextSwitchMs = 0;
+
+      // Clear any previous model immediately on verse change.
+      this.modelLayer.clear();
+    }
+
+    // Deterministic 0..1 float from verseKey + index (no Math.random; stable per verse)
+    #rand01(i) {
+      const fnv = (Memorial.VideoManager && Memorial.VideoManager.fnv1a32) ? Memorial.VideoManager.fnv1a32 : null;
+      if (!fnv) return 0.5;
+      const h = fnv(`${this.currentVerseKey}::modelCycle::${i}`);
+      return (h >>> 0) / 0xffffffff;
+    }
+
+    #computeRect(vpW, vpH, i, fullW, fullH) {
+      const pad = 10;
+
+      // Reserve a bottom band for symbols so scripture stays unobscured.
+      // Note: WebGL scissor/viewport origin is bottom-left.
+      const bandH = Math.floor(fullH * 0.36);
+
+      // Deterministic per-cycle randomness.
+      const r1 = this.#rand01(i * 7 + 1);
+      const r2 = this.#rand01(i * 7 + 2);
+      const r3 = this.#rand01(i * 7 + 3);
+
+      // X: full width (with padding), keeping the viewport fully on-canvas.
+      const xMin = pad;
+      const xMax = Math.max(xMin, fullW - vpW - pad);
+      const x = Math.floor(xMin + (xMax - xMin) * r1);
+
+      // Y: within the bottom band, but not flush to the bottom edge.
+      // We keep the full viewport inside the band so the symbol never overlaps scripture.
+      const yMin = Math.min(Math.max(pad + 18, pad), Math.max(pad, bandH - vpH - pad));
+      const yMax = Math.max(yMin, bandH - vpH - pad);
+
+      // Triangular-ish distribution centred around mid-band (more “natural” variation than uniform).
+      const t = (r2 + r3) * 0.5;
+      const y = Math.floor(yMin + (yMax - yMin) * t);
+
+      return { x, y, w: vpW, h: vpH };
+    }
+
+
+    async #switchToNext(nowMs) {
+      const plan = this.modelCyclePlan;
+      if (!plan || !plan.models || plan.models.length === 0) return;
+
+      const meta = plan.models[this.cycleIndex % plan.models.length];
+      const interval = Math.max(5000, Math.min(20000, plan.intervalMs || 15000));
+
+      // Viewport sizing: restrained; small variation each cycle.
+      const r = this.#rand01(this.cycleIndex);
+      const vpBase = 120;
+      const vpVar = 40;
+      const vpW = Math.floor(vpBase + r * vpVar);
+      const vpH = vpW; // square viewport feels “iconic” and stable
+
+      const rect = this.#computeRect(vpW, vpH, this.cycleIndex, this.modelLayer.width, this.modelLayer.height);
+
+      // Fade timings tied to interval (but capped).
+      const fadeInMs = Math.min(2000, Math.floor(interval * 0.22));
+      const fadeOutMs = Math.min(2200, Math.floor(interval * 0.24));
+      const onScreenMs = Math.max(1000, interval - fadeOutMs); // modelLayer handles fade out tail
+
+      // Slow spin (subtle), deterministic per cycle.
+      const spinY = 0.0006 + this.#rand01(this.cycleIndex * 7 + 3) * 0.0012;
+
+      await this.modelLayer.showModel(meta, nowMs, {
+        rect,
+        fadeInMs,
+        fadeOutMs,
+        onScreenMs,
+        spinY
+      });
+
+      this.cycleIndex += 1;
+      this.nextSwitchMs = nowMs + interval;
+    }
+
+    async tick({ nowMs, revealProgress, audioFeatures }) {
+      // Always update renderer so it clears properly.
+      if (!this.enabled) {
+        this.modelLayer.update(nowMs, audioFeatures);
+        return;
+      }
+
+      const plan = this.modelCyclePlan;
+      if (!plan || !plan.models || plan.models.length === 0) {
+        this.modelLayer.update(nowMs, audioFeatures);
+        return;
+      }
+
+      // Wait for reveal threshold, then start cycling indefinitely for this verse.
+      if (!this.cycleStarted) {
+        if (revealProgress >= this.revealThreshold) {
+          this.cycleStarted = true;
+          this.nextSwitchMs = 0; // force immediate first switch
         } else {
-          if (line) lines.push(line);
-          line = w;
+          this.modelLayer.update(nowMs, audioFeatures);
+          return;
         }
       }
-      if (line) lines.push(line);
+
+      // Switch when time comes, or if model cleared early.
+      if (this.nextSwitchMs === 0 || nowMs >= this.nextSwitchMs || !this.modelLayer.isActive()) {
+        await this.#switchToNext(nowMs);
+      }
+
+      this.modelLayer.update(nowMs, audioFeatures);
     }
-    return lines;
   }
 
-  const sketch = (p) => {
-    p.setup = () => {
-      const c = p.createCanvas(internal.w, internal.h);
-      c.parent(mountEl);
-      c.elt.style.pointerEvents = "none";
-      c.elt.style.position = "absolute";
-      c.elt.style.inset = "0";
-      c.elt.style.width = "720px";
-      c.elt.style.height = "1280px";
-      c.elt.style.imageRendering = "pixelated";
-
-      p.pixelDensity(1);
-      p.noSmooth();
-      p.frameRate(fps);
-
-      startMs = p.millis();
-    };
-
-    p.draw = () => {
-      const now = p.millis();
-      const full = buildFullText(current);
-
-      // Reveal timing
-      const charsVisible = Math.floor((now - startMs) / verseConfig.msPerChar);
-      const totalChars = full.length;
-
-      if (charsVisible >= totalChars && revealDoneMs === 0) {
-        revealDoneMs = now;
-        fadeStartMs = revealDoneMs + verseConfig.holdMs;
-        cycleDoneMs = fadeStartMs + verseConfig.fadeMs + verseConfig.gapMs;
-      }
-
-      // Alpha envelope
-      let alpha = 1;
-      if (fadeStartMs && now >= fadeStartMs) {
-        const t = (now - fadeStartMs) / verseConfig.fadeMs;
-        alpha = 1 - clamp01(t);
-      }
-
-      if (cycleDoneMs && now >= cycleDoneMs) {
-        nextVerse(now);
-      }
-
-      // Clear overlay each frame (transparent canvas)
-      p.clear();
-
-      // Subtle PS1-ish wobble: 1px jitter based on audio level (kept very small)
-      const j = Math.round((audio.level * 1.25));
-      const jx = (j > 0) ? (p.random(-j, j)) : 0;
-      const jy = (j > 0) ? (p.random(-j, j)) : 0;
-
-      // Woodcut-ish border frame (simple, non-figurative)
-      p.push();
-      p.translate(jx, jy);
-
-      // Background plate behind text (kept minimal; lets Hydra show through)
-      const plateA = 0.22 * alpha;
-      p.noStroke();
-      p.fill(0, 0, 0, 255 * plateA);
-      p.rect(18, 64, internal.w - 36, internal.h - 128, 8);
-
-      // Border lines (accent color)
-      const ac = accent.hex;
-      p.stroke(ac);
-      p.strokeWeight(1);
-      p.noFill();
-      p.rect(14, 58, internal.w - 28, internal.h - 116, 10);
-
-      // Inner hatch-like detail (simple linework; engraving vibe)
-      p.stroke(255, 255 * 0.08 * alpha);
-      for (let y = 74; y < internal.h - 80; y += 6) {
-        p.line(26, y, internal.w - 26, y - 2);
-      }
-
-      // Text
-      p.textAlign(p.LEFT, p.TOP);
-      p.textSize(18);
-      p.textLeading(24);
-
-      const marginX = 34;
-      const marginY = 92;
-      const maxW = internal.w - marginX * 2;
-
-      const visibleText = full.slice(0, Math.min(totalChars, charsVisible));
-      const lines = wrapLines(p, visibleText, maxW);
-
-      // Shadow for readability
-      p.noStroke();
-      p.fill(0, 255 * 0.85 * alpha);
-      const shadowOff = 1;
-      p.text(lines.join("\n"), marginX + shadowOff, marginY + shadowOff);
-
-      // Main text (slightly warm white)
-      p.fill(245, 235, 220, 255 * alpha);
-      p.text(lines.join("\n"), marginX, marginY);
-
-      // Accent rule
-      p.stroke(ac);
-      p.strokeWeight(2);
-      p.line(marginX, internal.h - 96, internal.w - marginX, internal.h - 96);
-
-      p.pop();
-    };
-  };
-
-  let p5Instance = null;
-
-  function start() {
-    if (!p5Instance) p5Instance = new window.p5(sketch);
-  }
-
-  return { start };
-}
-
+  Memorial.OverlayLayer = OverlayLayer;
+})();

@@ -1,0 +1,2587 @@
+{
+  "version": 2,
+  "notes": [
+    "Expanded symbol model catalog. Models are selected deterministically based on ThemeEngine extracted themes via themeTags.",
+    "themeTags are canonical theme ids from config/themes.json (tier2) plus tier1 meta themes (revelation, divine_action, human_response, time_eternity).",
+    "Most tags are assigned via filename->theme heuristics (e.g., Ruler->measure) plus any explicit .glb mentions in wowlocations.txt."
+  ],
+  "models": [
+    {
+      "id": "sym_anchor_01",
+      "path": "assets/models/symbols/glb/Anchor.glb",
+      "format": "glb",
+      "themeTags": [
+        "hope"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_animal_hide_01",
+      "path": "assets/models/symbols/glb/Animal Hide.glb",
+      "format": "glb",
+      "themeTags": [],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_apple_01",
+      "path": "assets/models/symbols/glb/Apple.glb",
+      "format": "glb",
+      "themeTags": [
+        "choice",
+        "knowledge"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_banner_wall_01",
+      "path": "assets/models/symbols/glb/Banner Wall.glb",
+      "format": "glb",
+      "themeTags": [
+        "peace",
+        "sign"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_banner_01",
+      "path": "assets/models/symbols/glb/Banner.glb",
+      "format": "glb",
+      "themeTags": [
+        "kingdom",
+        "sign"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_belt_01",
+      "path": "assets/models/symbols/glb/Belt.glb",
+      "format": "glb",
+      "themeTags": [],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_bone_01",
+      "path": "assets/models/symbols/glb/Bone.glb",
+      "format": "glb",
+      "themeTags": [
+        "death"
+      ],
+      "safe": true,
+      "mood": "dark",
+      "paletteWeight": {
+        "bright": 0.3,
+        "dark": 0.7
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_bonfire_01",
+      "path": "assets/models/symbols/glb/Bonfire.glb",
+      "format": "glb",
+      "themeTags": [
+        "divine_action",
+        "fire"
+      ],
+      "safe": true,
+      "mood": "light",
+      "paletteWeight": {
+        "bright": 0.7,
+        "dark": 0.3
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_book_01",
+      "path": "assets/models/symbols/glb/Book.glb",
+      "format": "glb",
+      "themeTags": [
+        "revelation",
+        "scroll_book",
+        "word"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_boots_01",
+      "path": "assets/models/symbols/glb/Boots.glb",
+      "format": "glb",
+      "themeTags": [
+        "way"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_brain_01",
+      "path": "assets/models/symbols/glb/Brain.glb",
+      "format": "glb",
+      "themeTags": [
+        "mind",
+        "wisdom"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_bread_01",
+      "path": "assets/models/symbols/glb/Bread.glb",
+      "format": "glb",
+      "themeTags": [
+        "bread"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_breastplate_01",
+      "path": "assets/models/symbols/glb/Breastplate.glb",
+      "format": "glb",
+      "themeTags": [
+        "righteousness"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_calendar_01",
+      "path": "assets/models/symbols/glb/Calendar.glb",
+      "format": "glb",
+      "themeTags": [
+        "time_eternity",
+        "time_season"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_castle_01",
+      "path": "assets/models/symbols/glb/Castle.glb",
+      "format": "glb",
+      "themeTags": [
+        "city",
+        "kingdom"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_chalice_01",
+      "path": "assets/models/symbols/glb/Chalice.glb",
+      "format": "glb",
+      "themeTags": [
+        "blood",
+        "sacrifice"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_chest_01",
+      "path": "assets/models/symbols/glb/Chest.glb",
+      "format": "glb",
+      "themeTags": [
+        "inheritance",
+        "reward"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_cloud_01",
+      "path": "assets/models/symbols/glb/Cloud.glb",
+      "format": "glb",
+      "themeTags": [
+        "cloud",
+        "divine_action",
+        "presence"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_clouds_01",
+      "path": "assets/models/symbols/glb/Clouds.glb",
+      "format": "glb",
+      "themeTags": [
+        "cloud",
+        "divine_action",
+        "presence"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_computer_table_01",
+      "path": "assets/models/symbols/glb/Computer Table.glb",
+      "format": "glb",
+      "themeTags": [],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_cross_01",
+      "path": "assets/models/symbols/glb/Cross.glb",
+      "format": "glb",
+      "themeTags": [
+        "redemption",
+        "revelation",
+        "sacrifice",
+        "salvation"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_crowd_01",
+      "path": "assets/models/symbols/glb/Crowd.glb",
+      "format": "glb",
+      "themeTags": [
+        "nation",
+        "people"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_crown_01",
+      "path": "assets/models/symbols/glb/Crown.glb",
+      "format": "glb",
+      "themeTags": [
+        "authority",
+        "crown",
+        "king"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_doorway_01",
+      "path": "assets/models/symbols/glb/Doorway.glb",
+      "format": "glb",
+      "themeTags": [
+        "new_birth",
+        "way"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_dove_01",
+      "path": "assets/models/symbols/glb/Dove.glb",
+      "format": "glb",
+      "themeTags": [
+        "presence",
+        "spirit"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_eyes_01",
+      "path": "assets/models/symbols/glb/Eyes.glb",
+      "format": "glb",
+      "themeTags": [
+        "face",
+        "vision"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_face_01",
+      "path": "assets/models/symbols/glb/Face.glb",
+      "format": "glb",
+      "themeTags": [
+        "face",
+        "image"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_figure_01",
+      "path": "assets/models/symbols/glb/Figure.glb",
+      "format": "glb",
+      "themeTags": [
+        "people"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_fire_01",
+      "path": "assets/models/symbols/glb/Fire.glb",
+      "format": "glb",
+      "themeTags": [
+        "divine_action",
+        "fire",
+        "judgment"
+      ],
+      "safe": true,
+      "mood": "dark",
+      "paletteWeight": {
+        "bright": 0.3,
+        "dark": 0.7
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_flower_01",
+      "path": "assets/models/symbols/glb/Flower.glb",
+      "format": "glb",
+      "themeTags": [
+        "creation",
+        "life"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_gold_01",
+      "path": "assets/models/symbols/glb/Gold.glb",
+      "format": "glb",
+      "themeTags": [
+        "glory"
+      ],
+      "safe": true,
+      "mood": "light",
+      "paletteWeight": {
+        "bright": 0.7,
+        "dark": 0.3
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_guard_tower_01",
+      "path": "assets/models/symbols/glb/Guard Tower.glb",
+      "format": "glb",
+      "themeTags": [
+        "watchfulness"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_head_01",
+      "path": "assets/models/symbols/glb/Head.glb",
+      "format": "glb",
+      "themeTags": [
+        "face",
+        "mind"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_helmet_01",
+      "path": "assets/models/symbols/glb/Helmet.glb",
+      "format": "glb",
+      "themeTags": [
+        "salvation"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_horn_01",
+      "path": "assets/models/symbols/glb/Horn.glb",
+      "format": "glb",
+      "themeTags": [
+        "voice",
+        "witness"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_hour_glass_01",
+      "path": "assets/models/symbols/glb/Hour Glass.glb",
+      "format": "glb",
+      "themeTags": [
+        "time_eternity",
+        "time_season"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_ladder_01",
+      "path": "assets/models/symbols/glb/Ladder.glb",
+      "format": "glb",
+      "themeTags": [
+        "dream",
+        "vision",
+        "way"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_lamb_01",
+      "path": "assets/models/symbols/glb/Lamb.glb",
+      "format": "glb",
+      "themeTags": [
+        "sacrifice",
+        "salvation"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_lantern_01",
+      "path": "assets/models/symbols/glb/Lantern.glb",
+      "format": "glb",
+      "themeTags": [
+        "light",
+        "revelation"
+      ],
+      "safe": true,
+      "mood": "light",
+      "paletteWeight": {
+        "bright": 0.7,
+        "dark": 0.3
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_man_01",
+      "path": "assets/models/symbols/glb/Man.glb",
+      "format": "glb",
+      "themeTags": [
+        "people"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_mirror_01",
+      "path": "assets/models/symbols/glb/Mirror.glb",
+      "format": "glb",
+      "themeTags": [
+        "image"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_mitre_01",
+      "path": "assets/models/symbols/glb/Mitre.glb",
+      "format": "glb",
+      "themeTags": [],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_nameplate_01",
+      "path": "assets/models/symbols/glb/Nameplate.glb",
+      "format": "glb",
+      "themeTags": [],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_offering_hands_01",
+      "path": "assets/models/symbols/glb/Offering Hands.glb",
+      "format": "glb",
+      "themeTags": [
+        "hand",
+        "human_response",
+        "mercy",
+        "worship"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_open_book_01",
+      "path": "assets/models/symbols/glb/Open Book.glb",
+      "format": "glb",
+      "themeTags": [
+        "peace",
+        "revelation",
+        "scroll_book",
+        "word"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_rainbow_01",
+      "path": "assets/models/symbols/glb/Rainbow.glb",
+      "format": "glb",
+      "themeTags": [
+        "covenant",
+        "promise",
+        "sign"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_raised_hands_01",
+      "path": "assets/models/symbols/glb/Raised Hands.glb",
+      "format": "glb",
+      "themeTags": [
+        "hand",
+        "human_response",
+        "worship"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_rings_01",
+      "path": "assets/models/symbols/glb/Rings.glb",
+      "format": "glb",
+      "themeTags": [
+        "covenant",
+        "promise"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_rock_01",
+      "path": "assets/models/symbols/glb/Rock.glb",
+      "format": "glb",
+      "themeTags": [
+        "strength"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_rubber_stamp_01",
+      "path": "assets/models/symbols/glb/Rubber Stamp.glb",
+      "format": "glb",
+      "themeTags": [
+        "sealing",
+        "testimony"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_ruler_01",
+      "path": "assets/models/symbols/glb/Ruler.glb",
+      "format": "glb",
+      "themeTags": [
+        "measure",
+        "truth"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_scroll_plus_staff_01",
+      "path": "assets/models/symbols/glb/Scroll + Staff.glb",
+      "format": "glb",
+      "themeTags": [
+        "authority",
+        "prophet",
+        "revelation",
+        "witness"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_scroll_01",
+      "path": "assets/models/symbols/glb/Scroll.glb",
+      "format": "glb",
+      "themeTags": [
+        "revelation",
+        "scroll_book",
+        "word"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_seed_01",
+      "path": "assets/models/symbols/glb/Seed.glb",
+      "format": "glb",
+      "themeTags": [
+        "promise",
+        "seed"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_seedlings_01",
+      "path": "assets/models/symbols/glb/Seedlings.glb",
+      "format": "glb",
+      "themeTags": [
+        "creation",
+        "life",
+        "seed"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_shield_01",
+      "path": "assets/models/symbols/glb/Shield.glb",
+      "format": "glb",
+      "themeTags": [
+        "faith"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_snowglobe_01",
+      "path": "assets/models/symbols/glb/Snowglobe.glb",
+      "format": "glb",
+      "themeTags": [
+        "beginning",
+        "revelation"
+      ],
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "mood": "neutral",
+      "safe": true,
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.22,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_staff_01",
+      "path": "assets/models/symbols/glb/Staff.glb",
+      "format": "glb",
+      "themeTags": [
+        "authority",
+        "prophet"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_stone_01",
+      "path": "assets/models/symbols/glb/Stone.glb",
+      "format": "glb",
+      "themeTags": [
+        "strength"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_sword_01",
+      "path": "assets/models/symbols/glb/Sword.glb",
+      "format": "glb",
+      "themeTags": [
+        "judgment",
+        "word"
+      ],
+      "safe": true,
+      "mood": "dark",
+      "paletteWeight": {
+        "bright": 0.3,
+        "dark": 0.7
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_tablet_01",
+      "path": "assets/models/symbols/glb/Tablet.glb",
+      "format": "glb",
+      "themeTags": [
+        "law",
+        "testimony"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_teardrop_01",
+      "path": "assets/models/symbols/glb/Teardrop.glb",
+      "format": "glb",
+      "themeTags": [],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_tent_01",
+      "path": "assets/models/symbols/glb/Tent.glb",
+      "format": "glb",
+      "themeTags": [
+        "presence"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_thorny_vine_01",
+      "path": "assets/models/symbols/glb/Thorny Vine.glb",
+      "format": "glb",
+      "themeTags": [
+        "sin",
+        "suffering"
+      ],
+      "safe": true,
+      "mood": "dark",
+      "paletteWeight": {
+        "bright": 0.3,
+        "dark": 0.7
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_throne_01",
+      "path": "assets/models/symbols/glb/Throne.glb",
+      "format": "glb",
+      "themeTags": [
+        "authority",
+        "kingdom",
+        "throne"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_tomb_01",
+      "path": "assets/models/symbols/glb/Tomb.glb",
+      "format": "glb",
+      "themeTags": [
+        "death",
+        "resurrection"
+      ],
+      "safe": true,
+      "mood": "dark",
+      "paletteWeight": {
+        "bright": 0.3,
+        "dark": 0.7
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_torch_01",
+      "path": "assets/models/symbols/glb/Torch.glb",
+      "format": "glb",
+      "themeTags": [
+        "divine_action",
+        "fire",
+        "light"
+      ],
+      "paletteWeight": {
+        "bright": 0.8,
+        "dark": 0.2
+      },
+      "mood": "light",
+      "safe": true,
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.7,
+        "onScreenMs": 4200,
+        "fadeInMs": 650,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerLeft",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          -0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_tower_01",
+      "path": "assets/models/symbols/glb/Tower.glb",
+      "format": "glb",
+      "themeTags": [
+        "city",
+        "watchfulness"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_tree_01",
+      "path": "assets/models/symbols/glb/Tree.glb",
+      "format": "glb",
+      "themeTags": [
+        "creation",
+        "life",
+        "seed"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_trophy_01",
+      "path": "assets/models/symbols/glb/Trophy.glb",
+      "format": "glb",
+      "themeTags": [
+        "glory",
+        "reward"
+      ],
+      "safe": true,
+      "mood": "light",
+      "paletteWeight": {
+        "bright": 0.7,
+        "dark": 0.3
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_trumpet_01",
+      "path": "assets/models/symbols/glb/Trumpet.glb",
+      "format": "glb",
+      "themeTags": [
+        "voice",
+        "witness"
+      ],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    },
+    {
+      "id": "sym_wood_figure_01",
+      "path": "assets/models/symbols/glb/Wood Figure.glb",
+      "format": "glb",
+      "themeTags": [],
+      "safe": true,
+      "mood": "neutral",
+      "paletteWeight": {
+        "bright": 0.55,
+        "dark": 0.45
+      },
+      "spawnPolicy": {
+        "cooldownVerses": 2,
+        "showAfterRevealPercent": 0.65,
+        "onScreenMs": 4500,
+        "fadeInMs": 600,
+        "fadeOutMs": 700
+      },
+      "renderHints": {
+        "screenAnchor": "lowerRight",
+        "viewportPx": [
+          160,
+          160
+        ],
+        "opacity": 0.2,
+        "scale": 1.0,
+        "rotation": [
+          0.0,
+          0.2,
+          0.0
+        ]
+      }
+    }
+  ]
+}

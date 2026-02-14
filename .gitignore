@@ -1,0 +1,6 @@
+
+# Local capture / archives (do not commit)
+_capture_raw/
+*.mkv
+*.zip
+

@@ -1,0 +1,999 @@
+{
+  "version": 1,
+  "notes": [
+    "Derived from wowlocations.txt: theme sections -> video basenames.",
+    "Used to constrain video selection to the curated set per extracted themes."
+  ],
+  "themes": [
+    {
+      "id": "beginning",
+      "label": "BEGINNING",
+      "section": 1,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "elwynn_forest_riverbed_static",
+        "elwynn_forest_waterfall_static",
+        "elwynn_forest_creek_static",
+        "elwynn_forest_tree_stump_static",
+        "elwynn_forest_creek_arc"
+      ]
+    },
+    {
+      "id": "creation",
+      "label": "CREATION",
+      "section": 2,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "mulgore_standing_stones_static",
+        "howling_fjord_sea_cliffs_static",
+        "storm_peaks_cliff_division_static"
+      ]
+    },
+    {
+      "id": "life",
+      "label": "LIFE",
+      "section": 3,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "nagrand_savannah_hills_static",
+        "elwynn_forest_river_bank_static",
+        "grizzly_hills_fallen_tree_static"
+      ]
+    },
+    {
+      "id": "light",
+      "label": "LIGHT",
+      "section": 4,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "elwynn_forest_trees_static",
+        "storm_peaks_snowfields_static",
+        "crystalsong_forest_trees_static"
+      ]
+    },
+    {
+      "id": "darkness",
+      "label": "DARKNESS",
+      "section": 5,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "terokkar_forest_dead_trees_static",
+        "shadowmoon_valley_hills_static",
+        "icecrown_mountains_static"
+      ]
+    },
+    {
+      "id": "word",
+      "label": "WORD",
+      "section": 6,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "storm_peaks_aqueduct_static",
+        "dun_morogh_exterior_stone_static",
+        "stormwind_corridor_static"
+      ]
+    },
+    {
+      "id": "breath_spirit",
+      "label": "BREATH / SPIRIT",
+      "section": 7,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "howling_fjord_wind_corridors_static",
+        "zangarmarsh_windmill_static",
+        "mulgore_windmill_static"
+      ]
+    },
+    {
+      "id": "image",
+      "label": "IMAGE",
+      "section": 8,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "grizzly_hills_clearing_static",
+        "elwynn_forest_wall_static",
+        "westfall_farmland_static"
+      ]
+    },
+    {
+      "id": "good",
+      "label": "GOOD",
+      "section": 9,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "elwynn_forest_well_static",
+        "nagrand_mountains_static",
+        "grizzly_hills_fountain_static"
+      ]
+    },
+    {
+      "id": "evil",
+      "label": "EVIL",
+      "section": 10,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "desolace_desert_static",
+        "silithus_mountain_static",
+        "dragonblight_columns_dollyin"
+      ]
+    },
+    {
+      "id": "command",
+      "label": "COMMAND",
+      "section": 11,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "elwynn_forest_road_dollyin",
+        "howling_fjord_road_static"
+      ]
+    },
+    {
+      "id": "choice",
+      "label": "CHOICE",
+      "section": 12,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "hinterlands_cliff_road_static",
+        "howling_fjord_dam_static",
+        "elwynn_forest_crossroads_static"
+      ]
+    },
+    {
+      "id": "knowledge",
+      "label": "KNOWLEDGE",
+      "section": 13,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "storm_peaks_basecamp_static",
+        "crystalsong_forest_rivers_static",
+        "dun_morogh_basecamp_static"
+      ]
+    },
+    {
+      "id": "sin",
+      "label": "SIN",
+      "section": 14,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "dragonblight_red_tree_static",
+        "desolace_bones_static"
+      ]
+    },
+    {
+      "id": "death",
+      "label": "DEATH",
+      "section": 15,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "badlands_bones_static",
+        "dragonblight_bones_static"
+      ]
+    },
+    {
+      "id": "covering",
+      "label": "COVERING",
+      "section": 16,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "grizzly_hills_shelter_static"
+      ]
+    },
+    {
+      "id": "promise",
+      "label": "PROMISE",
+      "section": 17,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "nagrand_waterfall_overlook_static"
+      ]
+    },
+    {
+      "id": "seed",
+      "label": "SEED",
+      "section": 18,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "westfall_crops_static"
+      ]
+    },
+    {
+      "id": "calling",
+      "label": "CALLING",
+      "section": 19,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "elwynn_forest_bridge_static"
+      ]
+    },
+    {
+      "id": "covenant",
+      "label": "COVENANT",
+      "section": 20,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "stormwind_masonry_static"
+      ]
+    },
+    {
+      "id": "law",
+      "label": "LAW",
+      "section": 21,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "stormwind_urban_static"
+      ]
+    },
+    {
+      "id": "way",
+      "label": "WAY",
+      "section": 22,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "stonetalon_mountains_path_static",
+        "stonetalon_mountains_path_dollyin"
+      ]
+    },
+    {
+      "id": "sacrifice",
+      "label": "SACRIFICE",
+      "section": 23,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "hellfire_peninsula_scarred_land_static"
+      ]
+    },
+    {
+      "id": "blood",
+      "label": "BLOOD",
+      "section": 24,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "eastern_plaguelands_lake_static"
+      ]
+    },
+    {
+      "id": "priest",
+      "label": "PRIEST",
+      "section": 25,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "stormwind_altar_static"
+      ]
+    },
+    {
+      "id": "king",
+      "label": "KING",
+      "section": 26,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "stormwind_keep_static"
+      ]
+    },
+    {
+      "id": "kingdom",
+      "label": "KINGDOM",
+      "section": 27,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "gm_island_bear_room_static"
+      ]
+    },
+    {
+      "id": "prophet",
+      "label": "PROPHET",
+      "section": 28,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "crystalsong_forest_tower_static"
+      ]
+    },
+    {
+      "id": "wisdom",
+      "label": "WISDOM",
+      "section": 29,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "crystalsong_forest_distant_ruins_static"
+      ]
+    },
+    {
+      "id": "fear",
+      "label": "FEAR",
+      "section": 30,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "blades_edge_mountain_barbed_sky_static"
+      ]
+    },
+    {
+      "id": "love",
+      "label": "LOVE",
+      "section": 31,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "eversong_woods_woodland_clearing_static"
+      ]
+    },
+    {
+      "id": "mercy",
+      "label": "MERCY",
+      "section": 32,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "darkshore_shoreline_static"
+      ]
+    },
+    {
+      "id": "truth",
+      "label": "TRUTH",
+      "section": 33,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "borean_tunda_lighthouse_static"
+      ]
+    },
+    {
+      "id": "faith",
+      "label": "FAITH",
+      "section": 34,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "howling_fjord_campsite_static"
+      ]
+    },
+    {
+      "id": "righteousness",
+      "label": "RIGHTEOUSNESS",
+      "section": 35,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "loch_modan_cliff_dwellings_static"
+      ]
+    },
+    {
+      "id": "judgment",
+      "label": "JUDGMENT",
+      "section": 36,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "badlands_exposed_mesa_static"
+      ]
+    },
+    {
+      "id": "repentance",
+      "label": "REPENTANCE",
+      "section": 37,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "redridge_mountains_road_static"
+      ]
+    },
+    {
+      "id": "forgiveness",
+      "label": "FORGIVENESS",
+      "section": 38,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "sholazar_basin_clearing_static"
+      ]
+    },
+    {
+      "id": "redemption",
+      "label": "REDEMPTION",
+      "section": 39,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "searing_gorge_lava_static"
+      ]
+    },
+    {
+      "id": "salvation",
+      "label": "SALVATION",
+      "section": 40,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "westfall_coast_static"
+      ]
+    },
+    {
+      "id": "new_birth",
+      "label": "New Birth",
+      "section": 41,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "teldrassil_waterfall_static"
+      ]
+    },
+    {
+      "id": "spirit",
+      "label": "Spirit",
+      "section": 42,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": []
+    },
+    {
+      "id": "witness",
+      "label": "WITNESS",
+      "section": 43,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "howling_fjord_cliff_face_static"
+      ]
+    },
+    {
+      "id": "body",
+      "label": "BODY",
+      "section": 44,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "grizzly_hills_logs_static"
+      ]
+    },
+    {
+      "id": "bread",
+      "label": "BREAD",
+      "section": 45,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "westfall_hay_static"
+      ]
+    },
+    {
+      "id": "water",
+      "label": "Water",
+      "section": 46,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "loch_modan_still_lake_static"
+      ]
+    },
+    {
+      "id": "rest",
+      "label": "Rest",
+      "section": 47,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "mulgore_plains_static"
+      ]
+    },
+    {
+      "id": "peace",
+      "label": "PEACE",
+      "section": 48,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "eversong_woods_pool_static"
+      ]
+    },
+    {
+      "id": "suffering",
+      "label": "Suffering",
+      "section": 48,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "desolace_barren_flats_static"
+      ]
+    },
+    {
+      "id": "hope",
+      "label": "Hope",
+      "section": 49,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "westfall_coastal_camp_static"
+      ]
+    },
+    {
+      "id": "glory",
+      "label": "Glory",
+      "section": 50,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "mulgore_overlook_static"
+      ]
+    },
+    {
+      "id": "inheritance",
+      "label": "Inheritance",
+      "section": 51,
+      "verseRef": "Psalm 16:5",
+      "verseQuote": "The LORD is the portion of mine inheritance.",
+      "videos": [
+        "terrokar_forest_water_mill_static",
+        "elwynn_forest_pumpkin_patch_static"
+      ]
+    },
+    {
+      "id": "resurrection",
+      "label": "Resurrection",
+      "section": 52,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "azshara_crater_waterfall_static"
+      ]
+    },
+    {
+      "id": "eternal_life",
+      "label": "Eternal Life",
+      "section": 53,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "teldrassil_pool_static"
+      ]
+    },
+    {
+      "id": "end",
+      "label": "End",
+      "section": 54,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "silithus_hills_static"
+      ]
+    },
+    {
+      "id": "name",
+      "label": "Name",
+      "section": 55,
+      "verseRef": "Proverbs 18:10",
+      "verseQuote": "The name of the LORD is a strong tower: the righteous runneth into it, and is safe.",
+      "videos": [
+        "westfall_tower_static"
+      ]
+    },
+    {
+      "id": "glory_of_god",
+      "label": "Glory of God",
+      "section": 56,
+      "verseRef": "Numbers 14:21",
+      "verseQuote": "But as truly as I live, all the earth shall be filled with the glory of the LORD.",
+      "videos": [
+        "storm_peaks_mountain_static"
+      ]
+    },
+    {
+      "id": "holiness",
+      "label": "Holiness",
+      "section": 57,
+      "verseRef": "Leviticus 11:44",
+      "verseQuote": "For I am the LORD your God: ye shall therefore sanctify yourselves, and ye shall be holy; for I am holy.",
+      "videos": [
+        "alterac_valley_mountains_static"
+      ]
+    },
+    {
+      "id": "presence",
+      "label": "Presence",
+      "section": 58,
+      "verseRef": "Exodus 33:14",
+      "verseQuote": "And he said, My presence shall go with thee, and I will give thee rest.",
+      "videos": [
+        "winterspring_mountains_static"
+      ]
+    },
+    {
+      "id": "face",
+      "label": "Face",
+      "section": 59,
+      "verseRef": "Psalm 27:8",
+      "verseQuote": "When thou saidst, Seek ye my face; my heart said unto thee, Thy face, LORD, will I seek.",
+      "videos": [
+        "deadwind_pass_rocks_static"
+      ]
+    },
+    {
+      "id": "voice",
+      "label": "Voice",
+      "section": 60,
+      "verseRef": "Psalm 29:4",
+      "verseQuote": "The voice of the LORD is powerful; the voice of the LORD is full of majesty.",
+      "videos": [
+        "hillsbrad_foothills_coast_static"
+      ]
+    },
+    {
+      "id": "hand",
+      "label": "Hand",
+      "section": 61,
+      "verseRef": "Ezekiel 37:1",
+      "verseQuote": "The hand of the LORD was upon me.",
+      "videos": [
+        "redridge_mountains_tower_static"
+      ]
+    },
+    {
+      "id": "heart",
+      "label": "Heart",
+      "section": 62,
+      "verseRef": "1 Samuel 16:7",
+      "verseQuote": "For the LORD seeth not as man seeth\u2026 the LORD looketh on the heart.",
+      "videos": [
+        "azuremist_isles_forest_static"
+      ]
+    },
+    {
+      "id": "mind",
+      "label": "Mind",
+      "section": 63,
+      "verseRef": "Romans 12:2",
+      "verseQuote": "Be ye transformed by the renewing of your mind.",
+      "videos": [
+        "ashenvale_forest_static"
+      ]
+    },
+    {
+      "id": "soul",
+      "label": "Soul",
+      "section": 64,
+      "verseRef": "Psalm 103:1",
+      "verseQuote": "Bless the LORD, O my soul: and all that is within me, bless his holy name.",
+      "videos": [
+        "felwood_forest_path_static"
+      ]
+    },
+    {
+      "id": "strength",
+      "label": "Strength",
+      "section": 65,
+      "verseRef": "Psalm 28:7",
+      "verseQuote": "The LORD is my strength and my shield.",
+      "videos": [
+        "durotar_plateau_static"
+      ]
+    },
+    {
+      "id": "power",
+      "label": "Power",
+      "section": 66,
+      "verseRef": "Psalm 62:11",
+      "verseQuote": "God hath spoken once; twice have I heard this; that power belongeth unto God.",
+      "videos": [
+        "duskwood_clock_tower_static"
+      ]
+    },
+    {
+      "id": "authority",
+      "label": "Authority",
+      "section": 67,
+      "verseRef": "Matthew 28:18",
+      "verseQuote": "All power is given unto me in heaven and in earth.",
+      "videos": [
+        "wintergrasp_temples_static"
+      ]
+    },
+    {
+      "id": "throne",
+      "label": "Throne",
+      "section": 68,
+      "verseRef": "Psalm 45:6",
+      "verseQuote": "Thy throne, O God, is for ever and ever.",
+      "videos": [
+        "arathi_basin_mountains_static"
+      ]
+    },
+    {
+      "id": "crown",
+      "label": "Crown",
+      "section": 69,
+      "verseRef": "2 Timothy 4:8",
+      "verseQuote": "Henceforth there is laid up for me a crown of righteousness.",
+      "videos": [
+        "thousand_needles_summits"
+      ]
+    },
+    {
+      "id": "inheritance",
+      "label": "Inheritance",
+      "section": 70,
+      "verseRef": "Psalm 16:5",
+      "verseQuote": "The LORD is the portion of mine inheritance.",
+      "videos": [
+        "terrokar_forest_water_mill_static",
+        "elwynn_forest_pumpkin_patch_static"
+      ]
+    },
+    {
+      "id": "nation",
+      "label": "Nation",
+      "section": 71,
+      "verseRef": "Genesis 12:2",
+      "verseQuote": "And I will make of thee a great nation.",
+      "videos": [
+        "barrens_savannah_static"
+      ]
+    },
+    {
+      "id": "people",
+      "label": "People",
+      "section": 72,
+      "verseRef": "Jeremiah 31:33",
+      "verseQuote": "I will be their God, and they shall be my people.",
+      "videos": [
+        "westfall_crossroads_static"
+      ]
+    },
+    {
+      "id": "remnant",
+      "label": "Remnant",
+      "section": 73,
+      "verseRef": "Isaiah 10:21",
+      "verseQuote": "The remnant shall return.",
+      "videos": [
+        "tirisfal_glades_blacksmith_static"
+      ]
+    },
+    {
+      "id": "exile",
+      "label": "Exile",
+      "section": 74,
+      "verseRef": "Psalm 137:1",
+      "verseQuote": "By the rivers of Babylon, there we sat down, yea, we wept, when we remembered Zion.",
+      "videos": [
+        "eastern_plaguelands_camp_static"
+      ]
+    },
+    {
+      "id": "return",
+      "label": "Return",
+      "section": 75,
+      "verseRef": "Jeremiah 30:3",
+      "verseQuote": "For, lo, the days come, saith the LORD, that I will bring again the captivity of my people\u2026",
+      "videos": [
+        "redridge_mountains_bridge_static"
+      ]
+    },
+    {
+      "id": "inheritance_of_the_land",
+      "label": "Inheritance of the Land",
+      "section": 76,
+      "verseRef": "Deuteronomy 1:8",
+      "verseQuote": "Go in and possess the land which the LORD sware unto your fathers\u2026",
+      "videos": [
+        "sholazar_basin_camp_static"
+      ]
+    },
+    {
+      "id": "city",
+      "label": "City",
+      "section": 77,
+      "verseRef": "Hebrews 12:22",
+      "verseQuote": "But ye are come unto mount Sion, and unto the city of the living God\u2026",
+      "videos": [
+        "stormwind_city_gates_static"
+      ]
+    },
+    {
+      "id": "temple",
+      "label": "Temple",
+      "section": 78,
+      "verseRef": "Isaiah 56:7",
+      "verseQuote": "Even them will I bring to my holy mountain, and make them joyful in my house of prayer\u2026",
+      "videos": [
+        "azshara_crater_ruined_temple_static"
+      ]
+    },
+    {
+      "id": "altar",
+      "label": "Altar",
+      "section": 79,
+      "verseRef": "Genesis 12:7",
+      "verseQuote": "And there builded he an altar unto the LORD\u2026",
+      "videos": [
+        "stormwind_altar_static"
+      ]
+    },
+    {
+      "id": "fire",
+      "label": "Fire",
+      "section": 80,
+      "verseRef": "Hebrews 12:29",
+      "verseQuote": "For our God is a consuming fire.",
+      "videos": [
+        "searing_gorge_lava_ember_static"
+      ]
+    },
+    {
+      "id": "cloud",
+      "label": "Cloud",
+      "section": 81,
+      "verseRef": "Exodus 13:21",
+      "verseQuote": "And the LORD went before them by day in a pillar of a cloud\u2026",
+      "videos": [
+        "dun_morogh_mountain_pass_static"
+      ]
+    },
+    {
+      "id": "sign",
+      "label": "Sign",
+      "section": 82,
+      "verseRef": "Exodus 3:12",
+      "verseQuote": "This shall be a sign unto thee\u2026",
+      "videos": [
+        "barrens_tree_mountain_static"
+      ]
+    },
+    {
+      "id": "testimony",
+      "label": "Testimony",
+      "section": 83,
+      "verseRef": "Psalm 19:7",
+      "verseQuote": "The testimony of the LORD is sure\u2026",
+      "videos": [
+        "loch_modan_road_static"
+      ]
+    },
+    {
+      "id": "witnesses",
+      "label": "Witnesses",
+      "section": 84,
+      "verseRef": "Deuteronomy 19:15",
+      "verseQuote": "One witness shall not rise up against a man\u2026 at the mouth of two witnesses\u2026",
+      "videos": [
+        "borean_tundra_twin_rocks_static"
+      ]
+    },
+    {
+      "id": "scroll_book",
+      "label": "Scroll / Book",
+      "section": 85,
+      "verseRef": "Psalm 40:7",
+      "verseQuote": "Then said I, Lo, I come: in the volume of the book it is written of me.",
+      "videos": [
+        "tanaris_palms_static"
+      ]
+    },
+    {
+      "id": "vision",
+      "label": "Vision",
+      "section": 86,
+      "verseRef": "Proverbs 29:18",
+      "verseQuote": "Where there is no vision, the people perish\u2026",
+      "videos": [
+        "thousand_needles_overlook_static"
+      ]
+    },
+    {
+      "id": "dream",
+      "label": "Dream",
+      "section": 87,
+      "verseRef": "Joel 2:28",
+      "verseQuote": "And it shall come to pass afterward\u2026 your old men shall dream dreams\u2026",
+      "videos": [
+        "emerald_dream_untextured_canyon_static"
+      ]
+    },
+    {
+      "id": "mystery",
+      "label": "Mystery",
+      "section": 88,
+      "verseRef": "1 Timothy 3:16",
+      "verseQuote": "And without controversy great is the mystery of godliness\u2026",
+      "videos": [
+        "zul_drak_ruins_static"
+      ]
+    },
+    {
+      "id": "revelation",
+      "label": "Revelation",
+      "section": 89,
+      "verseRef": "1 Corinthians 2:10",
+      "verseQuote": "But God hath revealed them unto us by his Spirit\u2026",
+      "videos": [
+        "un_goro_crater_jungle_canopy_static"
+      ]
+    },
+    {
+      "id": "time_season",
+      "label": "Time / Season",
+      "section": 90,
+      "verseRef": "Ecclesiastes 3:1",
+      "verseQuote": "To every thing there is a season, and a time to every purpose\u2026",
+      "videos": [
+        "caverns_of_time_tunnel_static"
+      ]
+    },
+    {
+      "id": "watchfulness",
+      "label": "Watchfulness",
+      "section": 91,
+      "verseRef": "Matthew 24:42",
+      "verseQuote": "Watch therefore: for ye know not what hour your Lord doth come.",
+      "videos": [
+        "redridge_mountains_lookout_cliffs_static"
+      ]
+    },
+    {
+      "id": "sealing",
+      "label": "Sealing",
+      "section": 92,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "wintergrasp_cold_pools_static"
+      ]
+    },
+    {
+      "id": "measure",
+      "label": "Measure",
+      "section": 93,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "sunstrider_isle_pond_static"
+      ]
+    },
+    {
+      "id": "reward",
+      "label": "Reward",
+      "section": 94,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "feralas_border_static"
+      ]
+    },
+    {
+      "id": "book_of_life",
+      "label": "Book of Life",
+      "section": 95,
+      "verseRef": null,
+      "verseQuote": null,
+      "videos": [
+        "mount_hyjal_mountains_static"
+      ]
+    }
+  ]
+}

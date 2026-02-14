@@ -1,123 +1,165 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Hydra + p5 Verse Overlay (720x1280)</title>
-  <style>
-    :root {
-      --w: 720px;
-      --h: 1280px;
-      --iw: 360px;
-      --ih: 640px;
-      --bg: #000;
-    }
-    html, body {
-      margin: 0;
-      height: 100%;
-      background: var(--bg);
-      overflow: hidden;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-    }
-
-    /* Stage is fixed pixel dimensions for OBS */
-    #stage {
-      position: relative;
-      width: var(--w);
-      height: var(--h);
-      margin: 0 auto;
-      background: #000;
-      overflow: hidden;
-    }
-
-    canvas {
-      position: absolute;
-      inset: 0;
-      width: var(--w);
-      height: var(--h);
-
-      /* Nearest-neighbor scale-up look */
-      image-rendering: pixelated;
-      image-rendering: crisp-edges;
-    }
-
-    #ui {
-      position: absolute;
-      inset: 0;
-      display: grid;
-      place-items: center;
-      background: rgba(0,0,0,0.55);
-      color: #fff;
-      z-index: 20;
-    }
-
-    #panel {
-      width: min(560px, 92%);
-      border: 2px solid rgba(255,255,255,0.25);
-      padding: 18px 16px;
-      background: rgba(0,0,0,0.65);
-    }
-
-    #panel h1 {
-      font-size: 18px;
-      margin: 0 0 10px 0;
-      font-weight: 600;
-      letter-spacing: 0.2px;
-    }
-
-    #panel p {
-      margin: 8px 0;
-      font-size: 13px;
-      line-height: 1.35;
-      opacity: 0.95;
-    }
-
-    #startBtn {
-      margin-top: 12px;
-      width: 100%;
-      padding: 12px 14px;
-      font-size: 14px;
-      font-weight: 600;
-      background: #1E48C7; /* Sapphire */
-      color: #fff;
-      border: 0;
-      cursor: pointer;
-    }
-
-    #startBtn:active { transform: translateY(1px); }
-
-    #hint {
-      margin-top: 10px;
-      font-size: 12px;
-      opacity: 0.85;
-    }
-  </style>
-</head>
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<meta content="dark" name="color-scheme"/>
+<meta content="no-store, no-cache, must-revalidate, max-age=0" http-equiv="Cache-Control"/>
+<meta content="no-cache" http-equiv="Pragma"/>
+<meta content="0" http-equiv="Expires"/>
+<title>Memorial</title>
+<link href="data:," rel="icon"/>
+<link href="styles.css" rel="stylesheet">
+</link></head>
 <body>
-  <div id="stage">
-    <canvas id="hydra" width="360" height="640"></canvas>
-    <!-- p5 will inject its own canvas; we attach it to #stage and size it to 360x640 -->
-    <div id="ui">
-      <div id="panel">
-        <h1>Start audio-reactive visuals</h1>
-        <p>
-          This page uses your browser microphone permission to react to audio.
-          For a hands-off run, allow mic access once and it will auto-start next time.
-        </p>
-        <button id="startBtn">Enable Audio + Start</button>
-        <div id="hint">
-          If you are routing system audio via PipeWire, select the monitor/virtual mic in Chromium’s site mic settings.
-        </div>
-      </div>
+<noscript>
+<div class="noscript">
+      Memorial requires JavaScript to run.
     </div>
-  </div>
-
-  <!-- Libraries (CDN). If you need offline operation, download these into ./vendor/ and update the src paths. -->
-  <script src="https://cdn.jsdelivr.net/npm/hydra-synth@1.3.29/dist/hydra-synth.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
-
-  <script type="module" src="./main.js"></script>
+</noscript>
+<div id="viewport">
+<div aria-label="Memorial stage (video + hydra + overlays + scripture)" id="stage">
+<!-- Layer 1: Background MP4 -->
+<video crossorigin="anonymous" id="bgVideo" loop="" muted="" playsinline="" preload="auto"></video>
+<!-- Layer 2: Hydra midground -->
+<canvas id="hydraCanvas"></canvas>
+<!-- Layer 3: Optional overlays (now includes 3D symbol rendering) -->
+<div aria-hidden="true" id="overlayLayer">
+<canvas id="modelCanvas"></canvas>
+</div>
+<!-- Layer 4: Foreground Scripture text (p5.js) -->
+<div id="p5Mount"></div>
+<!-- Final composite (authoritative preview + export source) -->
+<canvas id="finalCanvas"></canvas>
+<!-- Deterministic fallback background if videos fail -->
+<div aria-hidden="true" id="fallbackBg"></div>
+</div>
+</div>
+<div id="ui">
+<div class="uiHeader">
+<div class="title">Memorial</div>
+<div class="subtitle">KJV Scripture meditation · deterministic themes · restrained 9:16 compositor · v0.1</div>
+<div class="supportLinks">
+        Support: <a href="https://patreon.com/studiodominic" rel="noopener" target="_blank">Patreon</a>
+        · <a href="https://ko-fi.com/studiodominic" rel="noopener" target="_blank">Ko-fi</a>
+</div>
+</div>
+<div class="uiRow">
+<button class="btn btnPrimary" id="btnStartShow">Start Show</button>
+<button class="btn" id="btnStopShow">Stop</button>
+<label class="toggle">
+<input id="toggleLowPower" type="checkbox"/>
+<span>Low-power</span>
+</label>
+<label class="toggle">
+<input checked="" id="toggleSymbols" type="checkbox"/>
+<span>Symbols</span>
+</label>
+</div>
+<div class="uiGrid">
+<div class="panel">
+<div class="panelTitle">Resolve a verse (KJV only)</div>
+<div class="hint"><strong>Verse of the Day:</strong> <span id="votdLabel">Loading…</span> <button class="btn btnSmall" id="btnUseVotd" type="button">Use VOTD</button></div>
+<label class="field">
+<div class="fieldLabel">Reference (e.g., John 3:16)</div>
+<input autocomplete="off" class="input" id="inputRef" placeholder="Book Chapter:Verse" type="text"/>
+</label>
+<label class="field">
+<div class="fieldLabel">Verse text (optional; exact KJV match preferred)</div>
+<textarea class="input textarea" id="inputText" placeholder="Paste KJV verse text (optional)" rows="3"></textarea>
+</label>
+<div class="uiRow">
+<button class="btn btnPrimary" id="btnResolve">Resolve</button>
+<button class="btn" id="btnUseResolved">Use Resolved as Current</button>
+<button class="btn" id="btnNextVerse">Next Verse</button>
+</div>
+<div aria-live="polite" class="status" id="status" role="status"></div>
+</div>
+<div class="panel">
+<div class="panelTitle">Audio / Export</div>
+<label class="field">
+<div class="fieldLabel">Upload audio (.mp3/.wav) to drive reactivity and export</div>
+<input accept="audio/*,.mp3,.wav" class="input" id="inputAudio" type="file"/>
+<div class="hint">Uploaded audio loops. Mic remains available.</div>
+</label>
+<div class="uiRow">
+<button class="btn" id="btnUseUploadedAudio">Use Uploaded Audio</button>
+<button class="btn" id="btnStartAudioMic">Start Audio (Mic)</button>
+<button class="btn" id="btnStopAudio">Stop Audio</button>
+</div>
+<div class="uiRow">
+<label class="fieldInline">
+<span class="fieldLabelInline">Export length (s)</span>
+<input class="input inputSmall" id="exportSeconds" max="180" min="1" step="1" type="number" value="12"/>
+</label>
+<button class="btn" id="btnResetAV">Reset A/V to 0</button>
+<button class="btn btnPrimary" id="btnExportMp4">Export Video</button>
+</div>
+<div class="hint" id="exportHint">
+          Exports at 720×1280 @ 24fps. Most Chromium browsers record WebM; MP4 may require in-browser transcoding, which can be blocked when SharedArrayBuffer is unavailable. In that case, Memorial exports WebM and shows a local ffmpeg command to convert to MP4.
+        </div>
+</div>
+<div class="panel">
+<div class="panelTitle">Diagnostics (inspectable, deterministic)</div>
+<pre class="diag" id="diag"></pre>
+</div>
+</div>
+</div>
+<!-- External libraries (pinned versions; no build step). -->
+<script defer="" src="https://cdn.jsdelivr.net/npm/hydra-synth@1.4.0/dist/hydra-synth.js"></script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/p5@2.2.0/lib/p5.min.js"></script>
+<!-- Three.js (ES Modules) + GLTFLoader (ES Modules) via importmap.
+       We attach GLTFLoader to window.THREE.GLTFLoader so the rest of the codebase can stay non-module.
+       This avoids the "Failed to resolve module specifier 'three'" error by explicitly mapping it. -->
+<script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.152.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.152.0/examples/jsm/"
+      }
+    }
+  </script>
+<script type="module">
+    import * as THREE from 'three';
+    import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+    // NOTE: the ESM namespace object returned by `import * as THREE` is non-extensible.
+    // We need a mutable object so legacy (non-module) code can access THREE + GLTFLoader.
+    // Copy the namespace exports onto a plain object.
+    window.THREE = Object.assign({}, THREE);
+    // Expose loader in the legacy location expected by modelLayer.js
+    window.THREE.GLTFLoader = GLTFLoader;
+    // Signal readiness for legacy (non-module) scripts that may initialize quickly.
+    window.__MemorialThreeReady = Promise.resolve(true);
+  </script>
+<!-- Project files (order matters). -->
+<script src="utils.js"></script>
+  <script src="kjvCorpus.js"></script><script defer="" src="themeEngine.js"></script>
+<script defer="" src="videoManager.js"></script>
+<script defer="" src="modelManager.js"></script>
+<script defer="" src="modelLayer.js"></script>
+<script defer="" src="hydraLayer.js"></script>
+<script defer="" src="overlay.js"></script>
+<script defer="" src="compositor.js"></script>
+<script defer="" src="exporter.js"></script>
+<script defer="" src="main.js"></script>
+<!-- Ko-fi floating chat (keep this enabled so users can donate) -->
+<script src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"></script>
+<script>
+    window.addEventListener("load", function () {
+      try {
+        if (window.kofiWidgetOverlay && window.kofiWidgetOverlay.draw) {
+          kofiWidgetOverlay.draw("studiodominic", {
+            "type": "floating-chat",
+            "floating-chat.donateButton.text": "Donate",
+            "floating-chat.donateButton.background-color": "#323842",
+            "floating-chat.donateButton.text-color": "#fff"
+          });
+        }
+      } catch (e) {
+        console.warn("Ko-fi widget failed:", e);
+      }
+    });
+  </script>
 </body>
 </html>
-
