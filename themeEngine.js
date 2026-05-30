@@ -1,9 +1,9 @@
 (function () {
   "use strict";
 
-  window.Memorial = window.Memorial || {};
+  window.TheLamp = window.TheLamp || {};
 
-  const Utils = window.Memorial.Utils;
+  const Utils = window.TheLamp.Utils;
 
   const GEMSTONE_PALETTES = {
     bright: [
@@ -369,7 +369,7 @@
     }
   }
 
-  Memorial.ThemeEngine = ThemeEngine;
-  Memorial.GEMSTONE_PALETTES = GEMSTONE_PALETTES;
-  Memorial.hexToRgb01 = hexToRgb01;
+  TheLamp.ThemeEngine = ThemeEngine;
+  TheLamp.GEMSTONE_PALETTES = GEMSTONE_PALETTES;
+  TheLamp.hexToRgb01 = hexToRgb01;
 })();

@@ -1,14 +1,14 @@
 (function () {
   "use strict";
 
-  window.Memorial = window.Memorial || {};
+  window.TheLamp = window.TheLamp || {};
 
   // -----------------------------
   // KJV corpus (local only; fail explicitly if missing)
   // -----------------------------
   const KJV_CORPUS_URL = "assets/kjv/verses-1769.json";
 
-  const Utils = window.Memorial.Utils;
+  const Utils = window.TheLamp.Utils;
 
 
 
@@ -562,7 +562,7 @@
   // -----------------------------
   // App
   // -----------------------------
-  class MemorialApp {
+  class TheLampApp {
     constructor() {
       this.INTERNAL_W = 360;
       this.INTERNAL_H = 640;
@@ -616,23 +616,23 @@
         btnExportMp4: document.getElementById("btnExportMp4")
       };
 
-      this.themeEngine = new Memorial.ThemeEngine();
-      this.videoManager = new Memorial.VideoManager();
-      this.modelManager = new Memorial.ModelManager();
+      this.themeEngine = new TheLamp.ThemeEngine();
+      this.videoManager = new TheLamp.VideoManager();
+      this.modelManager = new TheLamp.ModelManager();
 
-      this.modelLayer = new Memorial.ModelLayer({
+      this.modelLayer = new TheLamp.ModelLayer({
         canvasEl: this.el.modelCanvas,
         width: this.INTERNAL_W,
         height: this.INTERNAL_H
       });
 
-      this.hydraLayer = new Memorial.HydraLayer({
+      this.hydraLayer = new TheLamp.HydraLayer({
         canvasEl: this.el.hydraCanvas,
         width: this.INTERNAL_W,
         height: this.INTERNAL_H
       });
 
-      this.overlay = new Memorial.OverlayLayer({ el: this.el.overlayLayer, modelLayer: this.modelLayer });
+      this.overlay = new TheLamp.OverlayLayer({ el: this.el.overlayLayer, modelLayer: this.modelLayer });
 
       this.audio = new AudioEngine();
 
@@ -643,7 +643,7 @@
       });
 
 
-      this.compositor = new Memorial.Compositor({
+      this.compositor = new TheLamp.Compositor({
         internalW: this.INTERNAL_W,
         internalH: this.INTERNAL_H,
         outW: 720,
@@ -659,7 +659,7 @@
         hydraOpacity: 0.18
       });
 
-      this.exporter = new Memorial.Exporter({
+      this.exporter = new TheLamp.Exporter({
         internalW: this.INTERNAL_W,
         internalH: this.INTERNAL_H,
         outW: 720,
@@ -708,12 +708,12 @@
       this.#status("Initializing…");
       this.#status("Loading KJV corpus…");
 
-      if (!Memorial.KJVCorpus) {
+      if (!TheLamp.KJVCorpus) {
         throw new Error("KJVCorpus module missing (kjvCorpus.js not loaded).");
       }
-      this.kjv = new Memorial.KJVCorpus({ url: KJV_CORPUS_URL });
+      this.kjv = new TheLamp.KJVCorpus({ url: KJV_CORPUS_URL });
       await this.kjv.load();
-      Memorial.kjv = this.kjv;
+      TheLamp.kjv = this.kjv;
 
 
       this.scripture.init();
@@ -1071,8 +1071,8 @@ onResolve() {
 
       document.documentElement.style.setProperty("--accent", primaryGem.hex);
 
-      const primary = { ...primaryGem, rgb01: Memorial.hexToRgb01(primaryGem.hex) };
-      const secondary = { ...secondaryGem, rgb01: Memorial.hexToRgb01(secondaryGem.hex) };
+      const primary = { ...primaryGem, rgb01: TheLamp.hexToRgb01(primaryGem.hex) };
+      const secondary = { ...secondaryGem, rgb01: TheLamp.hexToRgb01(secondaryGem.hex) };
 
       const topTheme = extracted.themes[0] || { id: "revelation" };
       const hydraFamily = this.themeEngine.getHydraFamilyForThemeId(topTheme.id);
@@ -1251,8 +1251,8 @@ onResolve() {
   }
 
   document.addEventListener("DOMContentLoaded", () => {
-    const app = new MemorialApp();
-    Memorial.app = app;
+    const app = new TheLampApp();
+    TheLamp.app = app;
     app.init().catch(err => {
       console.error(err);
       const status = document.getElementById("status");

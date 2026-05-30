@@ -1,9 +1,9 @@
 (function () {
   "use strict";
 
-  window.Memorial = window.Memorial || {};
+  window.TheLamp = window.TheLamp || {};
 
-  const Utils = window.Memorial.Utils;
+  const Utils = window.TheLamp.Utils;
   // Map anchor -> viewport position (pixel coords within 360x640 internal canvas).
   function viewportRect(anchor, vpW, vpH, fullW, fullH) {
     const pad = 10;
@@ -64,7 +64,7 @@
 	        console.warn("three.js or GLTFLoader not ready yet. Retrying…");
 	      }
 	      // Prefer a readiness promise if available.
-	      const ready = window.__MemorialThreeReady;
+	      const ready = window.__TheLampThreeReady;
 	      if (ready && typeof ready.then === "function") {
 	        this._threeRetryCount++;
 	        ready.then(() => setTimeout(() => this.init({ lowPower }), 0)).catch(() => {});
@@ -342,5 +342,5 @@
     }
   }
 
-  Memorial.ModelLayer = ModelLayer;
+  TheLamp.ModelLayer = ModelLayer;
 })();

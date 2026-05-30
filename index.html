@@ -8,18 +8,18 @@
 <meta content="no-store, no-cache, must-revalidate, max-age=0" http-equiv="Cache-Control"/>
 <meta content="no-cache" http-equiv="Pragma"/>
 <meta content="0" http-equiv="Expires"/>
-<title>Memorial</title>
+<title>The Lamp</title>
 <link href="data:," rel="icon"/>
 <link href="styles.css" rel="stylesheet">
 </link></head>
 <body>
 <noscript>
 <div class="noscript">
-      Memorial requires JavaScript to run.
+      The Lamp requires JavaScript to run.
     </div>
 </noscript>
 <div id="viewport">
-<div aria-label="Memorial stage (video + hydra + overlays + scripture)" id="stage">
+<div aria-label="The Lamp stage (video + hydra + overlays + scripture)" id="stage">
 <!-- Layer 1: Background MP4 -->
 <video crossorigin="anonymous" id="bgVideo" loop="" muted="" playsinline="" preload="auto"></video>
 <!-- Layer 2: Hydra midground -->
@@ -38,7 +38,7 @@
 </div>
 <div id="ui">
 <div class="uiHeader">
-<div class="title">Memorial</div>
+<div class="title">The Lamp</div>
 <div class="subtitle">KJV Scripture meditation · deterministic themes · restrained 9:16 compositor · v0.1</div>
 <div class="supportLinks">
         Support: <a href="https://patreon.com/studiodominic" rel="noopener" target="_blank">Patreon</a>
@@ -97,7 +97,7 @@
 <button class="btn btnPrimary" id="btnExportMp4">Export Video</button>
 </div>
 <div class="hint" id="exportHint">
-          Exports at 720×1280 @ 24fps. Most Chromium browsers record WebM; MP4 may require in-browser transcoding, which can be blocked when SharedArrayBuffer is unavailable. In that case, Memorial exports WebM and shows a local ffmpeg command to convert to MP4.
+          Exports at 720×1280 @ 24fps. Most Chromium browsers record WebM; MP4 may require in-browser transcoding, which can be blocked when SharedArrayBuffer is unavailable. In that case, The Lamp exports WebM and shows a local ffmpeg command to convert to MP4.
         </div>
 </div>
 <div class="panel">
@@ -130,7 +130,7 @@
     // Expose loader in the legacy location expected by modelLayer.js
     window.THREE.GLTFLoader = GLTFLoader;
     // Signal readiness for legacy (non-module) scripts that may initialize quickly.
-    window.__MemorialThreeReady = Promise.resolve(true);
+    window.__TheLamp = Promise.resolve(true);
   </script>
 <!-- Project files (order matters). -->
 <script src="utils.js"></script>

@@ -1,9 +1,9 @@
 (function () {
   "use strict";
 
-  window.Memorial = window.Memorial || {};
+  window.TheLamp = window.TheLamp || {};
 
-  const Utils = window.Memorial.Utils;
+  const Utils = window.TheLamp.Utils;
   class HydraLayer {
     constructor({ canvasEl, width, height }) {
       this.canvasEl = canvasEl;
@@ -392,5 +392,5 @@
     }
   }
 
-  Memorial.HydraLayer = HydraLayer;
+  TheLamp.HydraLayer = HydraLayer;
 })();

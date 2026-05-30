@@ -1,4 +1,4 @@
-# Memorial 3D Symbol Models (Biblical theme accents)
+# The Lamp 3D Symbol Models (Biblical theme accents)
 
 ## Where to store models
 assets/models/

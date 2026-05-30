@@ -1,15 +1,15 @@
 (function () {
   "use strict";
 
-  window.Memorial = window.Memorial || {};
+  window.TheLamp = window.TheLamp || {};
 
-  const Utils = window.Memorial.Utils;
+  const Utils = window.TheLamp.Utils;
 
   // farskipper/kjv corpus format:
   // - keys: "Genesis 1:1"
   // - values: may contain "#" paragraph markers and bracketed [words] for italics (supplied words).
   //
-  // Memorial policy:
+  // The Lamp policy:
   // - Fail explicitly if corpus cannot be loaded.
   // - Strip markup deterministically for rendering + theming (no interpretation).
   // - Reference is required; optional text is used only to verify an exact KJV match.
@@ -374,7 +374,7 @@
       return `${y}-${m}-${d}`;
     }
 
-    getVerseOfDayKey({ date = new Date(), timeZone = "Europe/London", salt = "Memorial|VOTD|v1" } = {}) {
+    getVerseOfDayKey({ date = new Date(), timeZone = "Europe/London", salt = "The_Lamp|VOTD|v1" } = {}) {
       const idx = this.getVerseIndex();
       if (!idx.length) return null;
 
@@ -442,5 +442,5 @@
     }
   }
 
-  Memorial.KJVCorpus = KJVCorpus;
+  TheLamp.KJVCorpus = KJVCorpus;
 })();

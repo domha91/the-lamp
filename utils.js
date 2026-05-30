@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  window.Memorial = window.Memorial || {};
+  window.TheLamp = window.TheLamp || {};
 
   // Generic deterministic helpers shared across the app.
   // Keep these small, dependency-free, and stable across browsers.
@@ -51,5 +51,5 @@
     return `${y}-${m}-${d}`;
   };
 
-  window.Memorial.Utils = Utils;
+  window.TheLamp.Utils = Utils;
 })();

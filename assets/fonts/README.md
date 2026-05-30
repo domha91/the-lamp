@@ -1,4 +1,4 @@
-# Memorial Fonts
+# The Lamp  Fonts
 
 Prototype runs with system fonts so it works immediately.
 To add fonts:

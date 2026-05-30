@@ -1,9 +1,9 @@
 (function () {
   "use strict";
 
-  window.Memorial = window.Memorial || {};
+  window.TheLamp = window.TheLamp || {};
 
-  const Utils = window.Memorial.Utils;
+  const Utils = window.TheLamp.Utils;
   class ModelManager {
     constructor() {
       this.meta = null;
@@ -87,7 +87,7 @@
           score += 0.15 * align;
         }
 
-        const tie = Memorial.VideoManager.fnv1a32(`${seedRef}::model::${m.id}`) / 0xffffffff;
+        const tie = TheLamp.VideoManager.fnv1a32(`${seedRef}::model::${m.id}`) / 0xffffffff;
 
         if (!best || score > best.score || (score === best.score && tie > best.tie)) {
           best = { model: m, score, tie };
@@ -148,8 +148,8 @@
         return s;
       };
 
-      const fnv = Memorial.VideoManager && Memorial.VideoManager.fnv1a32
-        ? Memorial.VideoManager.fnv1a32
+      const fnv = TheLamp.VideoManager && TheLamp.VideoManager.fnv1a32
+        ? TheLamp.VideoManager.fnv1a32
         : (() => 0);
 
       // Collect models per eligible theme.
@@ -206,5 +206,5 @@
     }
   }
 
-  Memorial.ModelManager = ModelManager;
+  TheLamp.ModelManager = ModelManager;
 })();

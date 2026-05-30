@@ -1,6 +1,6 @@
 # KJV corpus (local)
 
-Memorial uses a **local KJV-only** corpus (no Bible APIs).
+The Lamp uses a **local KJV-only** corpus (no Bible APIs).
 
 ## Source
 This project expects the JSON format from the public-domain repository:
@@ -21,5 +21,5 @@ Optional (not used yet):
 - `assets/kjv/layout-1769.json`
 
 ## Notes
-- Memorial currently renders plain text. The corpus markers are stripped deterministically.
+- The Lamp currently renders plain text. The corpus markers are stripped deterministically.
 - Verse resolution is deterministic: by reference, or by an exact text match against the local corpus.

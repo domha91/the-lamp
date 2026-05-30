@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  window.Memorial = window.Memorial || {};
+  window.TheLamp = window.TheLamp || {};
 
   // Overlay orchestrates model appearances (timing + cycling) while keeping the renderer policy restrained.
   class OverlayLayer {
@@ -46,7 +46,7 @@
 
     // Deterministic 0..1 float from verseKey + index (no Math.random; stable per verse)
     #rand01(i) {
-      const fnv = (Memorial.VideoManager && Memorial.VideoManager.fnv1a32) ? Memorial.VideoManager.fnv1a32 : null;
+      const fnv = (TheLamp.VideoManager && TheLamp.VideoManager.fnv1a32) ? TheLamp.VideoManager.fnv1a32 : null;
       if (!fnv) return 0.5;
       const h = fnv(`${this.currentVerseKey}::modelCycle::${i}`);
       return (h >>> 0) / 0xffffffff;
@@ -151,5 +151,5 @@
     }
   }
 
-  Memorial.OverlayLayer = OverlayLayer;
+  TheLamp.OverlayLayer = OverlayLayer;
 })();

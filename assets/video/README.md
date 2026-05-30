@@ -1,4 +1,4 @@
-# Memorial Background Video System (WoW terrain loops)
+# The Lamp Background Video System (WoW terrain loops)
 
 ## Mandatory constraints
 - Source: captured manually from https://noclip.website/
@@ -10,7 +10,7 @@
   - 6–12 seconds ideal.
   - Mark `loopSafe: false` if the clip is not safe.
 
-## Capture guidance aligned with Memorial pipeline
+## Capture guidance aligned with The Lamp pipeline
 - Aspect: 9:16 vertical
 - Internal compositor: 360×640 (pixelated intentionally)
 - Presentation: 720×1280 @ ~24fps
@@ -38,4 +38,4 @@ All meaning lives in videos.json:
 ## Runtime
 - Deterministic selection from verse themes.
 - Muted autoplay-safe; loops; cropped to 9:16.
-- If missing, Memorial runs with a deterministic fallback background.
+- If missing, The Lamp runs with a deterministic fallback background.

@@ -1,9 +1,9 @@
 (function () {
   "use strict";
 
-  window.Memorial = window.Memorial || {};
+  window.TheLamp = window.TheLamp || {};
 
-  const Utils = window.Memorial.Utils;
+  const Utils = window.TheLamp.Utils;
   function fnv1a32(str) {
     let h = 0x811c9dc5;
     for (let i = 0; i < str.length; i++) {
@@ -88,5 +88,5 @@
     static fnv1a32(str) { return fnv1a32(str); }
   }
 
-  Memorial.VideoManager = VideoManager;
+  TheLamp.VideoManager = VideoManager;
 })();

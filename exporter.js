@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  window.Memorial = window.Memorial || {};
+  window.TheLamp = window.TheLamp || {};
 
   function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
@@ -17,12 +17,12 @@
   }
 
   async function loadScriptOnce(src) {
-    if (document.querySelector(`script[data-memorial-src="${src}"]`)) return;
+    if (document.querySelector(`script[data-the-lamp="${src}"]`)) return;
     await new Promise((resolve, reject) => {
       const s = document.createElement("script");
       s.src = src;
       s.async = true;
-      s.dataset.memorialSrc = src;
+      s.dataset.theLampsrc = src;
       s.onload = () => resolve();
       s.onerror = (e) => reject(new Error(`Failed to load script: ${src}`));
       document.head.appendChild(s);
@@ -210,7 +210,7 @@
       // If we got MP4 directly, download immediately.
       if ((blob.type || "").includes("mp4")) {
         this.onStatus("Export ready (MP4). Downloading…");
-        downloadBlob(blob, "memorial_export.mp4");
+        downloadBlob(blob, "the_lamp.mp4");
         this.onStatus("Export complete.");
         return;
       }
@@ -226,8 +226,8 @@
         const hint = "MP4 transcode is blocked because SharedArrayBuffer is unavailable (page not cross-origin isolated).";
         console.warn(hint);
         this.onStatus(hint + " Downloading WebM instead…");
-        downloadBlob(blob, "memorial_export.webm");
-        this.onStatus("Export complete (WebM). To convert to MP4 locally: ffmpeg -i memorial_export.webm -c:v libx264 -pix_fmt yuv420p -c:a aac -b:a 192k -movflags +faststart memorial_export.mp4");
+        downloadBlob(blob, "the_lamp.webm");
+        this.onStatus("Export complete (WebM). To convert to MP4 locally: ffmpeg -i the_lamp.webm -c:v libx264 -pix_fmt yuv420p -c:a aac -b:a 192k -movflags +faststart the_lamp.mp4");
         return;
       }
 
@@ -287,10 +287,10 @@
 
       const mp4Blob = new Blob([outBytes.buffer], { type: "video/mp4" });
       this.onStatus("Export ready (MP4). Downloading…");
-      downloadBlob(mp4Blob, "memorial_export.mp4");
+      downloadBlob(mp4Blob, "the_lamp.mp4");
       this.onStatus("Export complete.");
     }
   }
 
-  window.Memorial.Exporter = Exporter;
+  window.TheLamp.Exporter = Exporter;
 })();

@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  window.Memorial = window.Memorial || {};
+  window.TheLamp = window.TheLamp || {};
 
   // Canvas draw helper: draw an image/video with "cover" scaling (object-fit: cover)
   function drawCover(ctx, src, dstW, dstH) {
@@ -144,5 +144,5 @@
     }
   }
 
-  window.Memorial.Compositor = Compositor;
+  window.TheLamp.Compositor = Compositor;
 })();
